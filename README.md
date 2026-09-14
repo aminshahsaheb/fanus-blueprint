@@ -6,6 +6,12 @@
 [![Static](https://img.shields.io/badge/runtime-static-0b0d12?style=for-the-badge)](https://fanus1.netlify.app)
 [![Netlify](https://img.shields.io/badge/deploy-Netlify-111318?style=for-the-badge)](https://fanus1.netlify.app)
 
+<p align="center">
+  <img src="assets/fanus-blueprint-hero.svg" alt="Fānus Blueprint visual system hero" width="100%">
+</p>
+
+<p align="center"><sub>ARCHITECTURE · STATE · API · LEDGER · MIGRATION · RITUAL · TERMINAL</sub></p>
+
 ---
 
 ## ◈ THE BLUEPRINT
