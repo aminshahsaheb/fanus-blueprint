@@ -350,6 +350,12 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 </style>
 </head>
 <body>
+<a class="blueprint-nav" href="#architecture" aria-label="Jump to architecture">ARCH</a>
+<style>
+.blueprint-nav{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.45rem .7rem;border:1px solid var(--line);background:rgba(3,4,10,.72);backdrop-filter:blur(12px);color:var(--paper-dim);font:600 .65rem/1 'Courier New',monospace;letter-spacing:.12em;text-decoration:none;transition:.25s}
+.blueprint-nav:hover,.blueprint-nav:focus-visible{color:var(--paper);border-color:var(--witness);outline:none}
+@media(max-width:560px){.blueprint-nav{top:.65rem;left:.65rem}}
+</style>
 
 <!-- Loader -->
 <div class="loader" id="loader">
