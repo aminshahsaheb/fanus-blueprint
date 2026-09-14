@@ -2,7 +2,12 @@
 <html lang="fa" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="description" content="Fānus Blueprint — visual engineering and observability interface for the Fānus ecosystem.">
+<meta name="theme-color" content="#03040a">
+<meta name="color-scheme" content="dark">
+<meta property="og:title" content="Fānus Engineering Blueprint">
+<meta property="og:description" content="Visual engineering and observability interface for the Fānus ecosystem.">
 <title>🜁 Fānus Engineering Blueprint · Living Prototype</title>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css">
 <script type="importmap">
@@ -28,7 +33,10 @@
 }
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Vazirmatn',sans-serif;}
 html{scroll-behavior:smooth;overflow-x:hidden;}
-body{background:var(--void);color:var(--paper);overflow-x:hidden;cursor:none;line-height:1.7;}
+body{background:var(--void);color:var(--paper);overflow-x:hidden;cursor:none;line-height:1.7;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;}
+@media (hover:none),(pointer:coarse){body{cursor:auto}.cursor-dot,.cursor-ring{display:none}.ritual-btn,.ritual-step,.arch-node,.tree-item,.api-ep,.api-send-btn,.speed-btn{cursor:pointer}.code-body{font-size:.75rem}.hero{padding:1.25rem}.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}section{padding:5rem 1rem}.section-desc{font-size:.95rem}.ledger-table{min-width:720px}.ledger-wrap{overflow-x:auto}.state-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.hero{min-height:92svh}.hero h1{font-size:clamp(3.3rem,18vw,5.5rem)}.hero-sub{font-size:1rem}.hero-tagline{font-size:.9rem}.hero-stats{grid-template-columns:1fr 1fr;gap:.5rem}.hero-stat{padding:1rem .5rem}.hero-stat-val{font-size:1.8rem}.section-title{font-size:clamp(2rem,11vw,3rem)}.arch-layer{padding:1.25rem}.arch-layer-num{font-size:2rem}.arch-nodes{grid-template-columns:repeat(2,minmax(0,1fr))}.api-panel{padding:1rem;min-height:auto}.state-flow{grid-template-columns:1fr 1fr}.state-display{padding:1.5rem}.state-title{font-size:1.8rem}.state-indicator{width:64px;height:64px}.file-tree{font-size:.75rem}.code-body{font-size:.68rem}.ledger-table th,.ledger-table td{padding:.75rem 1rem}}
+
 
 /* Cursor */
 .cursor-dot,.cursor-ring{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);}
@@ -1972,12 +1980,12 @@ function addTerminalLog(type,msg){
 setInterval(()=>{
   const msgs=[
     ['state',`Witness heartbeat · state=${currentState}`],
-    ['api','SSE keepalive sent to 3 clients'],
-    ['ok','LEDGER.json synced to IndexedDB'],
-    ['build','Flame Genome integrity check: ✓'],
+    ['state',`Witness heartbeat · state=${currentState}`],
+    ['ok','Local ledger state available'],
+    ['build','Blueprint integrity check: ✓'],
     ['state',`Drift Δ: ${(Math.random()*20).toFixed(1)}%`],
-    ['api','JWT token refreshed'],
-    ['ok','Redis cache hit ratio: 94%']
+    ['api','Demo transport ready'],
+    ['ok','Client runtime healthy']
   ];
   const [t,m]=msgs[Math.floor(Math.random()*msgs.length)];
   addTerminalLog(t,m);
@@ -2023,10 +2031,10 @@ document.querySelectorAll('.arch-node').forEach(n=>{
 
 // Initial
 setTimeout(()=>addTerminalLog('ok','Engineering Blueprint loaded'),800);
-setTimeout(()=>addTerminalLog('api','Live Witness Terminal: connecting to Railway API...'),1200);
+setTimeout(()=>addTerminalLog('api','Live Witness Terminal: initializing client transport...'),1200);
 setTimeout(()=>addTerminalLog('ok','Demo endpoint active: /demo/chat'),2000);
 setTimeout(()=>addTerminalLog('state','Initial state: RAW'),1500);
-setTimeout(()=>addTerminalLog('api','MSW mock handlers registered: 9 endpoints'),2200);
+setTimeout(()=>addTerminalLog('api','Demo handlers initialized · simulated endpoints'),2200);
 setTimeout(()=>addTerminalLog('ok','Ready for Witness initiation'),3000);
 </script>
 </body>
