@@ -356,8 +356,15 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 @keyframes fadeUp{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
 .fade-up{animation:fadeUp .4s ease-out forwards;}
 </style>
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="preconnect" href="https://github.com">
+<meta name="application-name" content="Fānus Blueprint">
+<meta name="apple-mobile-web-app-title" content="Fānus Blueprint">
 </head>
 <body>
+<noscript><div class="noscript-notice">FĀNUS BLUEPRINT requires JavaScript for its interactive engineering surface.</div></noscript>
 <a class="skip-link" href="#main-content">Skip to main content</a>
 <style>
 .skip-link{position:fixed;top:-100px;left:1rem;z-index:2000;padding:.65rem .9rem;background:var(--void);border:1px solid var(--witness);color:var(--paper);font:600 .7rem/1 'Courier New',monospace;letter-spacing:.08em;text-decoration:none}
@@ -430,6 +437,8 @@ button:not(:disabled){-webkit-tap-highlight-color:transparent}
   .migration-arrow{margin:.1rem auto}
 }
 
+.noscript-notice{position:fixed;inset:0;z-index:3000;display:grid;place-items:center;padding:2rem;background:#03040a;color:#f5f1e8;text-align:center;font:600 .8rem/1.7 ui-monospace,SFMono-Regular,Menlo,monospace;letter-spacing:.08em}
+::selection{background:rgba(16,185,129,.22);color:var(--paper)}
 /* --- Final visual system pass --- */
 :root{
   --bp-max:1180px;
