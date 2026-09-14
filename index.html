@@ -355,6 +355,11 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 </style>
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<style>
+.skip-link{position:fixed;top:-100px;left:1rem;z-index:2000;padding:.65rem .9rem;background:var(--void);border:1px solid var(--witness);color:var(--paper);font:600 .7rem/1 'Courier New',monospace;letter-spacing:.08em;text-decoration:none}
+.skip-link:focus{top:1rem}
+</style>
 <a class="blueprint-nav" href="#architecture" aria-label="Jump to architecture">ARCH</a>
 <style>
 .blueprint-nav{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.45rem .7rem;border:1px solid var(--line);background:rgba(3,4,10,.72);backdrop-filter:blur(12px);color:var(--paper-dim);font:600 .65rem/1 'Courier New',monospace;letter-spacing:.12em;text-decoration:none;transition:.25s}
