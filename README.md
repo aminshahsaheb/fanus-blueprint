@@ -14,6 +14,43 @@
 
 ---
 
+## ◇ QUICK SIGNAL
+
+<p align="center">
+  <a href="https://fanus1.netlify.app"><strong>OPEN FANUS 1 →</strong></a>
+  &nbsp;&nbsp;·&nbsp;&nbsp;
+  <a href="https://github.com/aminshahsaheb/fanus-blueprint">SOURCE →</a>
+</p>
+
+<details>
+<summary><strong>READ THE SYSTEM IN 30 SECONDS</strong></summary>
+
+```
+CANONICAL CORE
+     │
+     ├── LIVING SEAL
+     │
+     ├── PRESENCE
+     │
+     └── BLUEPRINT
+             │
+             ├── ARCHITECTURE
+             ├── STATE
+             ├── API
+             ├── LEDGER
+             ├── MIGRATION
+             ├── RITUAL
+             └── TERMINAL
+```
+
+**Blueprint = visibility.**  
+**Living Seal = canonical truth.**  
+**Presence = verification surface.**
+
+</details>
+
+---
+
 ## ◈ THE BLUEPRINT
 
 **Fānus Blueprint** is the visual and explanatory surface of the Fānus system.
