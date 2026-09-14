@@ -1,0 +1,8 @@
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# This repository is a static Blueprint surface.
+# No build step is required; index.html is the production entrypoint.
