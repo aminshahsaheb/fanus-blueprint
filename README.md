@@ -67,13 +67,28 @@ It is the **window into the system**.
 
 ## ◇ LIVE
 
-**Fanus 1**
+### FANUS 1
+
+**The live Blueprint surface.**
 
 → https://fanus1.netlify.app
 
-**Repository**
+### SOURCE
 
 → https://github.com/aminshahsaheb/fanus-blueprint
+
+---
+
+## ◈ AT A GLANCE
+
+| Layer | Purpose |
+|---|---|
+| **Living Seal** | Canonical source of truth |
+| **Presence** | Presence / verification surface |
+| **Blueprint** | Visual engineering / inspection |
+| **Fanus 1** | Live public interface |
+
+> **Observe the system. Keep the truth elsewhere.**
 
 ---
 
@@ -247,6 +262,14 @@ That distinction is part of the Blueprint's engineering discipline.
 6. **Audit desktop, mobile, keyboard, and touch behavior.**
 7. **Do not introduce infrastructure that the project does not need.**
 8. **Keep deployment explicit and reproducible.**
+
+---
+
+## ◈ DOCUMENTATION
+
+- **Architecture** — system boundaries, runtime layers and integrity rules
+- **Production** — deployment, runtime verification and security checklist
+- **Live** — [Fanus 1](https://fanus1.netlify.app)
 
 ---
 
