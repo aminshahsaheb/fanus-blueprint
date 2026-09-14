@@ -408,6 +408,25 @@ button:not(:disabled){-webkit-tap-highlight-color:transparent}
   .hero::after{transition:none}
 }
 
+/* --- Interaction consistency pass --- */
+@media (hover:hover){
+  .api-ep:hover,.state-node:hover,.tree-item:hover,.ritual-step:hover{
+    transform:translateX(2px);
+  }
+}
+.api-ep:focus-within,.state-node:focus-visible,.tree-item:focus-visible,.ritual-step:focus-visible{
+  border-color:var(--witness);
+}
+@media(max-width:900px){
+  .state-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media(max-width:560px){
+  .state-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:.5rem}
+  .state-node{min-height:88px;padding:.9rem .5rem}
+  .migration-flow{gap:.7rem}
+  .migration-arrow{margin:.1rem auto}
+}
+
 /* --- Final visual system pass --- */
 :root{
   --bp-max:1180px;
