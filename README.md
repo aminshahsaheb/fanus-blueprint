@@ -1,76 +1,230 @@
-# Fānus Blueprint
+# FĀNUS BLUEPRINT
 
-> Visual engineering and observability interface for the Fānus ecosystem.
+> **A visual engineering surface for the Fānus ecosystem.**
 
-Fānus Blueprint is the visual / explanatory surface for the Fānus system. It presents architecture, state transitions, API concepts, ledger integrity, migration flows, ritual interaction, and runtime-oriented observability in a single immersive interface.
+[![Blueprint](https://img.shields.io/badge/F%C4%81NUS-BLUEPRINT-111318?style=for-the-badge)](https://github.com/aminshahsaheb/fanus-blueprint)
+[![Static](https://img.shields.io/badge/runtime-static-0b0d12?style=for-the-badge)](https://fanus1.netlify.app)
+[![Netlify](https://img.shields.io/badge/deploy-Netlify-111318?style=for-the-badge)](https://fanus1.netlify.app)
 
-## Role in the ecosystem
+---
 
-```
-Fanus-Living-Seal
-      │
-      └── canonical core / source of truth
-                │
-                ├── fanus-presence
-                │      └── presence + verification runtime
-                │
-                ├── fanus-app
-                │      └── application experience
-                │
-                └── fanus-blueprint
-                       └── visual engineering / Blueprint surface
-```
+## ◈ THE BLUEPRINT
 
-This repository is intentionally independent from `fanus-presence`. The Blueprint must not become a second implementation of the canonical core.
+**Fānus Blueprint** is the visual and explanatory surface of the Fānus system.
 
-## Source policy
+It turns system architecture into an interface you can **see, inspect, and move through**:
 
-The current `index.html` is the original Fanus 1 Blueprint source carried into Git as a standalone static site. The first migration preserves its visual language and runtime behavior rather than silently redesigning or rewriting it.
+`ARCHITECTURE` · `STATE` · `API` · `LEDGER` · `MIGRATION` · `RITUAL` · `TERMINAL`
 
-Before converting the page into a component framework, audit and classify every simulated, mocked, external, and real runtime behavior.
+This repository is not the canonical engine.
 
-## Deployment
+It is the **window into the system**.
 
-This project is designed for Netlify as a static site:
+---
 
-- Production entrypoint: `index.html`
-- Publish directory: repository root
-- Build command: none
-- Netlify configuration: `netlify.toml`
+## ◇ LIVE
 
-Recommended production flow:
+**Fanus 1**
+
+→ https://fanus1.netlify.app
+
+**Repository**
+
+→ https://github.com/aminshahsaheb/fanus-blueprint
+
+---
+
+## ◇ SYSTEM POSITION
 
 ```
-GitHub main
-    ↓
-Netlify
-    ↓
+                         FĀNUS
+                           │
+              ┌────────────┴────────────┐
+              │                         │
+       LIVING SEAL                  ECOSYSTEM
+       canonical core                  │
+              │            ┌────────────┼────────────┐
+              │            │            │            │
+              └──────→ PRESENCE       APP       BLUEPRINT
+                           │                         │
+                    runtime / verify          visual / inspect
+                                                      │
+                                                      ▼
+                                             fanus1.netlify.app
+```
+
+### Boundary
+
+| Surface | Role |
+|---|---|
+| **Fanus-Living-Seal** | Canonical core / source of truth |
+| **fanus-presence** | Presence + verification runtime |
+| **fanus-app** | Application experience |
+| **fanus-blueprint** | Visual engineering / observability surface |
+
+> **One core. Multiple surfaces. No duplicated truth.**
+
+---
+
+## ◈ DESIGN LANGUAGE
+
+The Blueprint follows a deliberately dark, technical visual language:
+
+```
+VOID
+  ↓
+PAPER
+  ↓
+WITNESS
+  ↓
+DRIFT
+  ↓
+SEAL
+  ↓
+SYSTEM
+```
+
+The interface combines:
+
+- cinematic darkness
+- monospace engineering typography
+- restrained glow
+- information-dense panels
+- state-driven interaction
+- architectural diagrams
+- terminal / console metaphors
+- responsive composition
+
+The goal is not decoration.
+
+**The visual system should make the architecture legible.**
+
+---
+
+## ◇ WHAT YOU CAN EXPLORE
+
+### 01 — Architecture
+See how the Fānus surfaces relate to the canonical core.
+
+### 02 — State
+Follow state transitions and system status as an interactive model.
+
+### 03 — API
+Inspect API concepts and client-side demonstrations.
+
+### 04 — Ledger
+Explore integrity, sealing, hashes, and browser-side ledger behavior.
+
+### 05 — Migration
+Walk through the migration model as a visual sequence.
+
+### 06 — Ritual
+Experience the interaction layer rather than reading about it.
+
+### 07 — Terminal
+Observe runtime-oriented telemetry and system feedback.
+
+---
+
+## ◈ TECHNICAL SHAPE
+
+This repository intentionally remains a **standalone static site**.
+
+```
+index.html
+    │
+    ├── HTML / structure
+    ├── CSS / visual system
+    └── JavaScript / interaction
+              │
+              ├── browser APIs
+              ├── selected CDN dependencies
+              └── configured external/demo integrations
+```
+
+### Deployment
+
+```
+push → main
+        │
+        ▼
+     GitHub
+        │
+        ▼
+     Netlify
+        │
+        ▼
 fanus1.netlify.app
 ```
 
-Keep the Netlify site for `fanus-presence` separate. Do not point both sites at the same repository unless the deployment architecture is intentionally changed.
+No framework migration is required for the current deployment model.
 
-## External runtime dependencies
+---
 
-The Blueprint currently loads selected browser dependencies from CDNs, including Vazirmatn, Three.js, GSAP / ScrollTrigger, and Chart.js. Runtime/API demonstrations in the page must be treated according to their actual implementation; visual simulation is not proof of backend execution.
+## ◇ TRUTH MODEL
 
-## Engineering rules
+Not every visual element represents a production backend operation.
 
-1. Preserve the established visual identity unless a deliberate redesign is approved.
-2. Keep canonical core logic out of this repository.
-3. Never present mocked or simulated telemetry as verified production telemetry.
-4. Keep deployment configuration explicit and minimal.
-5. Prefer small, reviewable commits.
-6. Test desktop and mobile behavior after visual changes.
+### Browser-real
 
-## Current state
+- Web Crypto ledger hashing / sealing behavior
+- client-side integrity checks
+- GitHub API reads where configured
+- configured API requests from the browser
 
-- [x] Original Fanus 1 source imported
-- [x] Independent repository established
-- [x] Netlify static deployment configuration added
-- [x] Production response headers added
-- [ ] Runtime/mock/external dependency audit
-- [ ] Full responsive QA
-- [ ] Accessibility audit
-- [ ] Production endpoint verification
-- [ ] Final visual regression pass
+### Demonstration
+
+- simulated telemetry
+- generated visual metrics
+- mock/demo API concepts
+- interactive migration / ritual sequences
+
+**Visual presence is not proof of backend execution.**
+
+That distinction is part of the Blueprint's engineering discipline.
+
+---
+
+## ◈ ENGINEERING RULES
+
+1. **Protect the canonical core.**
+2. **Do not duplicate backend truth here.**
+3. **Never disguise simulation as production telemetry.**
+4. **Preserve the established visual identity deliberately.**
+5. **Prefer small, reviewable changes.**
+6. **Audit desktop, mobile, keyboard, and touch behavior.**
+7. **Do not introduce infrastructure that the project does not need.**
+8. **Keep deployment explicit and reproducible.**
+
+---
+
+## ◇ STATUS
+
+| Area | State |
+|---|:---:|
+| Original Fanus 1 source | ✓ |
+| Independent repository | ✓ |
+| Netlify deployment | ✓ |
+| Production headers | ✓ |
+| Responsive foundation | ✓ |
+| Accessibility foundation | ✓ |
+| Visual system refinement | ✓ |
+| Runtime / dependency audit | ◌ |
+| Full responsive QA | ◌ |
+| Production endpoint verification | ◌ |
+| Final visual regression | ◌ |
+
+---
+
+## ◈ PHILOSOPHY
+
+> **The Blueprint does not replace the system.  
+> It makes the system visible.**
+
+---
+
+### Fānus
+
+**Living Seal · Presence · Application · Blueprint**
+
+© Fānus ecosystem
