@@ -360,6 +360,33 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 .blueprint-nav{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.45rem .7rem;border:1px solid var(--line);background:rgba(3,4,10,.72);backdrop-filter:blur(12px);color:var(--paper-dim);font:600 .65rem/1 'Courier New',monospace;letter-spacing:.12em;text-decoration:none;transition:.25s}
 .blueprint-nav:hover,.blueprint-nav:focus-visible{color:var(--paper);border-color:var(--witness);outline:none}
 :focus-visible{outline:1px solid var(--witness);outline-offset:4px}
+/* --- Final visual system pass --- */
+:root{
+  --bp-max:1180px;
+  --bp-gutter:clamp(1rem,3vw,3rem);
+}
+.hero-content,.section-inner{width:min(100% - 2*var(--bp-gutter),var(--bp-max));margin-inline:auto}
+.hero-label,.section-label{letter-spacing:.22em}
+.section-title{max-width:14ch;text-wrap:balance}
+.section-desc{max-width:68ch;text-wrap:pretty}
+.glass{border-radius:14px;box-shadow:0 18px 60px rgba(0,0,0,.18)}
+.arch-node,.api-panel,.state-display,.ledger-wrap,.terminal-window{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+@media (hover:hover){
+  .arch-node:hover,.api-panel:hover,.state-display:hover,.ledger-wrap:hover,.terminal-window:hover{
+    transform:translateY(-2px);
+    border-color:color-mix(in srgb,var(--witness) 32%,var(--line));
+    box-shadow:0 24px 70px rgba(0,0,0,.24)
+  }
+}
+@media (max-width:760px){
+  .hero-content,.section-inner{width:min(100% - 1.5rem,680px)}
+  .section-title{max-width:18ch}
+  .arch-nodes{gap:.65rem}
+}
+@media (prefers-reduced-motion:reduce){
+  .arch-node,.api-panel,.state-display,.ledger-wrap,.terminal-window{transition:none}
+}
+
 ::selection{background:var(--witness);color:var(--void)}
 html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
