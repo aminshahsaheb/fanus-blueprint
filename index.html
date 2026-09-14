@@ -364,6 +364,16 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 <style>
 .blueprint-nav{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.45rem .7rem;border:1px solid var(--line);background:rgba(3,4,10,.72);backdrop-filter:blur(12px);color:var(--paper-dim);font:600 .65rem/1 'Courier New',monospace;letter-spacing:.12em;text-decoration:none;transition:.25s}
 .blueprint-nav:hover,.blueprint-nav:focus-visible{color:var(--paper);border-color:var(--witness);outline:none}
+button{font:inherit}
+button:disabled{cursor:not-allowed;opacity:.48}
+button:not(:disabled){-webkit-tap-highlight-color:transparent}
+@media(max-width:760px){
+  button:not(.copy-btn){min-height:44px}
+  .api-console button,.ledger-actions button,.ritual-controls button{min-height:44px}
+}
+@media(max-width:560px){
+  .hero-cta,.ritual-btn,.api-send-btn{width:100%;justify-content:center}
+}
 :focus-visible{outline:1px solid var(--witness);outline-offset:4px}
 /* --- Art direction: hierarchy, depth, and responsive composition --- */
 .hero::after{content:'';position:absolute;inset:auto 0 0;height:24%;background:linear-gradient(to bottom,transparent,rgba(3,4,10,.92));pointer-events:none;z-index:1}
