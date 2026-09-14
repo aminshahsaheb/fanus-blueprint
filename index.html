@@ -939,6 +939,13 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 <script>
 const FANUS_API = 'https://fanus-living-seal.fastapicloud.dev';
 
+function escapeHtml(value){
+  return String(value ?? '').replace(/[&<>"']/g, ch => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[ch]));
+}
+
+
 async function checkLiveApi() {
   try {
     const r = await fetch(FANUS_API + '/demo/status');
@@ -968,7 +975,7 @@ async function sendWitnessMessage() {
 
   const userDiv = document.createElement('div');
   userDiv.style.cssText = 'padding:.75rem 1rem;background:rgba(245,241,232,.03);border-right:2px solid rgba(245,241,232,.2);border-radius:6px 0 0 6px;font-size:.9rem;text-align:right;';
-  userDiv.innerHTML = '<span style="font-size:.65rem;color:var(--paper-dim);display:block;margin-bottom:.3rem;letter-spacing:.15em;">شما</span>' + msg;
+  userDiv.innerHTML = '<span style="font-size:.65rem;color:var(--paper-dim);display:block;margin-bottom:.3rem;letter-spacing:.15em;">شما</span>' + escapeHtml(msg);
   msgs.appendChild(userDiv);
 
   const loadDiv = document.createElement('div');
@@ -1006,7 +1013,7 @@ async function sendWitnessMessage() {
       if (d.arrogance) meta += '<span class="mono" style="font-size:.65rem;color:var(--ember)">⚠ arrogance</span>';
       meta += '<span class="mono" style="font-size:.65rem;color:var(--blue)">src:' + (d.sources||0) + '</span></div>';
     }
-    resDiv.innerHTML = '<span style="font-size:.65rem;color:var(--witness);display:block;margin-bottom:.3rem;letter-spacing:.15em;">فانوس</span>' + d.response + meta;
+    resDiv.innerHTML = '<span style="font-size:.65rem;color:var(--witness);display:block;margin-bottom:.3rem;letter-spacing:.15em;">فانوس</span>' + escapeHtml(d.response) + meta;
     msgs.appendChild(resDiv);
     msgs.scrollTop = msgs.scrollHeight;
   } catch(e) {
