@@ -202,6 +202,15 @@ fanus1.netlify.app
 
 No framework migration is required for the current deployment model.
 
+### Repository map
+
+- `index.html` — production entrypoint and interactive surface
+- `docs/ARCHITECTURE.md` — system boundary and runtime layers
+- `docs/PRODUCTION.md` — deployment, verification, truth classification and security checklist
+- `assets/fanus-blueprint-hero.svg` — repository hero artwork
+
+For the live experience, open **Fanus 1** → https://fanus1.netlify.app
+
 ---
 
 ## ◇ TRUTH MODEL
