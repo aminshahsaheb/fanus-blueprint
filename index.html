@@ -360,6 +360,39 @@ footer p{font-size:.9rem;color:var(--paper-dim);margin-bottom:.6rem;}
 .blueprint-nav{position:fixed;top:1rem;left:1rem;z-index:1000;padding:.45rem .7rem;border:1px solid var(--line);background:rgba(3,4,10,.72);backdrop-filter:blur(12px);color:var(--paper-dim);font:600 .65rem/1 'Courier New',monospace;letter-spacing:.12em;text-decoration:none;transition:.25s}
 .blueprint-nav:hover,.blueprint-nav:focus-visible{color:var(--paper);border-color:var(--witness);outline:none}
 :focus-visible{outline:1px solid var(--witness);outline-offset:4px}
+/* --- Art direction: hierarchy, depth, and responsive composition --- */
+.hero::after{content:'';position:absolute;inset:auto 0 0;height:24%;background:linear-gradient(to bottom,transparent,rgba(3,4,10,.92));pointer-events:none;z-index:1}
+.hero-content{position:relative;z-index:2}
+.section-inner{position:relative}
+.section-inner::before{content:'';position:absolute;top:0;left:0;width:34px;height:1px;background:linear-gradient(90deg,var(--witness),transparent);opacity:.65}
+.section-label{display:inline-flex;align-items:center;gap:.55rem}
+.section-label::before{content:'//';opacity:.45;font-family:'Courier New',monospace}
+.arch-layer{background:linear-gradient(135deg,rgba(245,241,232,.035),rgba(245,241,232,.012));}
+.arch-node{backdrop-filter:blur(6px)}
+.api-panel{background:linear-gradient(135deg,rgba(245,241,232,.035),rgba(245,241,232,.01));}
+.state-display{position:relative;overflow:hidden}
+.state-display::after{content:'';position:absolute;inset:auto 0 0;height:45%;background:linear-gradient(to top,rgba(16,185,129,.045),transparent);pointer-events:none}
+.ledger-wrap{background:linear-gradient(135deg,rgba(245,241,232,.025),rgba(245,241,232,.008));}
+.migration-node{background:linear-gradient(145deg,rgba(245,241,232,.03),rgba(245,241,232,.008));}
+.ritual-btn{box-shadow:0 0 0 1px rgba(251,191,36,.08),0 12px 40px rgba(0,0,0,.2)}
+.terminal-window{background:radial-gradient(circle at 50% 0,rgba(16,185,129,.035),transparent 55%),rgba(0,0,0,.28)}
+@media(max-width:760px){
+  .hero::after{height:30%}
+  .section-inner::before{width:24px}
+  .migration-arrow{width:100%;text-align:center;transform:rotate(90deg)}
+}
+@media(max-width:560px){
+  .hero-content{padding-top:4rem}
+  .hero-label{font-size:.62rem}
+  .hero-stats{margin-top:1.4rem}
+  .arch-node{min-height:96px;display:flex;flex-direction:column;justify-content:center}
+  .api-ep{padding:.75rem}
+  .migration-node{min-width:100%;padding:1.25rem}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero::after{transition:none}
+}
+
 /* --- Final visual system pass --- */
 :root{
   --bp-max:1180px;
